@@ -1,0 +1,38 @@
+*{
+    margin: 0%;
+    padding: 0%s;
+}
+body{
+background-color: rgb(21, 21, 59);
+color:white;
+font-family: 'Times New Roman', Times, serif ;
+}
+nav{
+display: flex;
+justify-content: space-around;
+align-items: center;
+height: 80px;
+background-color: rgb(18, 46, 71);
+}
+nav ul{
+display: flex;
+justify-content: center;
+}
+nav ul li{
+list-style: none;
+margin: 0 23px ;
+}
+.left{
+font-size: 1.5rem;
+}
+.first section{
+display: flex;
+justify-content: space-around;
+}
+.first section div{
+width:30%;
+}
+.Lsection{
+background-color: blueviolet;
+width: 30%;
+}

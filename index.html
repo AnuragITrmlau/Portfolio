@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anurag -Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(21, 21, 59);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            background-color: rgb(18, 46, 71);
+            padding: 0 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(125, 184, 236);
+            font-size: 1.06rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.1px;
+            margin: 40px auto;
+            max-width: 90%;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px 10px;
+            flex-wrap: wrap;
+        }
+
+        .firstsection>div {
+            width: 100%;
+            max-width: 45%;
+        }
+
+        .Lsection {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .Lsection .btn {
+            padding: 12px;
+            background-color: #322c7f;
+            color: aliceblue;
+            border: none;
+            border-radius: 55px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .Rsection img {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .purple {
+            color: rgb(182, 132, 230);
+        }
+
+        .text-grey {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(182, 132, 230);
+        }
+
+        /* About Section style */
+        section {
+            padding: 30px 10px;
+        }
+
+        section .content {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section .title {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .about .about-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about .lef,
+        .about .rig {
+            width: 100%;
+            max-width: 45%;
+        }
+
+        .about .left img {
+            width: 100%;
+            max-width: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        section .topic {
+            color: var(--black-color);
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .about-details .rig p {
+            text-align: justify;
+            color: var(--black-color);
+        }
+
+        section .button {
+            margin: 16px 0;
+        }
+
+        section .button button {
+            transition: all 0.4s ease;
+            padding: 14px 40px;
+            background-color: #322c7f;
+            color: aliceblue;
+            border: none;
+            border-radius: 55px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        section .button button:hover {
+            background-color: #9c97f1;
+            color: var(--primary-color);
+        }
+
+        /* Code for MY Skills */
+        .skills {
+            background-color: #15153b;
+        }
+
+        .skills .content {
+            padding: 40px 0;
+        }
+
+        .skills .skills-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .skills-details .text {
+            width: 50%;
+        }
+
+        .skills-details p {
+            color: var(--black-color);
+            text-align: justify;
+        }
+
+        .skills .skills-details .experience {
+            display: flex;
+            align-items: center;
+            margin: 0 10px;
+        }
+
+        .skills-details .experience .num {
+            color: var(--black-color);
+            font-size: 80px;
+        }
+
+        .skills-details .experience .num {
+            color: var(--black-color);
+            font-size: 80px;
+        }
+
+        .skills-details .experience .exp {
+            color: var(--black-color);
+            margin-left: 20px;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 6px;
+        }
+
+        .skills-details .boxes {
+            width: 45%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .skills-details .box {
+            width: calc(100% / 2 - 20px);
+            margin: 20px 0;
+        }
+
+        .skills-details .boxes .topic {
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .skills-details .boxes {
+            width: 45%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+
+        .skills-details .box {
+            width: calc(100% 2- 20px);
+            margin: 20px 0;
+        }
+
+        .skills-details .boxes .topic {
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .skills-details .boxes .per {
+            font-size: 60px;
+            color: var(--primary-color);
+        }
+
+
+
+
+        /* Work Experience */
+        .secondSection {
+            max-width: 90%;
+            margin: auto;
+            height: auto;
+            padding: 20px 0;
+        }
+
+        .secondSection h1 {
+            font-size: 1.5rem;
+        }
+
+        .secondSection .box {
+            background-color: #15153b;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .secondSection .vertical {
+            width: 100%;
+            max-width: 200px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .secondSection .image-top {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .vertical-title {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .vertical-desc {
+            font-size: 0.8rem;
+            color: gray;
+        }
+
+        /* My Services CSS */
+        .services .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: aliceblue;
+
+        }
+
+        .services .boxes .box {
+            margin: 20px 0;
+            width: calc(100% / 3 - 20px);
+            text-align: center;
+            border-radius: 12px;
+            padding: 20px 10px;
+            box-shadow: 0 10px 12px #0D101D;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .services .boxes .box:hover {
+            background: var(--primary-color);
+            color: var(--white-color);
+        }
+
+        .services .boxes .box .icon {
+            height: 50px;
+            width: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            color: var(--white-color);
+            margin: 0 auto 10px auto;
+            transition: all 0.4s ease;
+        }
+
+        .boxes .box:hover .icon {
+            background: var(--white-color);
+            color: var(--primary-color);
+        }
+
+        .services .boxes .box:hover .topic,
+        .services .boxes .box:hover p {
+            color: var(--white-color);
+            transition: all 0.4s ease;
+        }
+
+        /* My Contact   */
+        #section-wrapper {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .box-wrapper {
+            position: relative;
+            display: table;
+            width: 1100px;
+            margin: auto;
+            margin-top: 35px;
+            border-radius: 30px;
+        }
+
+        .info-wrap {
+            width: 35%;
+            height: 551px;
+            padding: 40px;
+            float: left;
+            display: block;
+            border-radius: 30px 0px 0px 30px;
+            background: linear-gradient(144deg, rgba(126, 39, 156, 1) 0%, rgba(49, 39, 157, 1) 49%);
+            color: #fff;
+        }
+
+        .info-title {
+            text-align: left;
+            font-size: 28px;
+            letter-spacing: 0.5px;
+        }
+
+        .info-sub-title {
+            font-size: 18px;
+            font-weight: 300;
+            margin-top: 17px;
+            letter-spacing: 0.5px;
+            line-height: 26px;
+        }
+
+        .info-details {
+            list-style: none;
+            margin: 60px 0px;
+        }
+
+        .info-details li {
+            margin-top: 25px;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .info-details li i {
+            background: #F44770;
+            padding: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .info-details li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .info-details li a:hover {
+            color: #F44770;
+        }
+
+        .social-icons {
+            list-style: none;
+            text-align: center;
+            margin: 20px 0px;
+        }
+
+        .social-icons li {
+            display: inline-block;
+        }
+
+        .social-icons li i {
+            background: #F44770;
+            color: #fff;
+            padding: 15px;
+            font-size: 20px;
+            border-radius: 22%;
+            margin: 0px 5px;
+            cursor: pointer;
+            transition: all .5s;
+        }
+
+        .social-icons li i:hover {
+            background: #fff;
+            color: #000000;
+        }
+
+        .form-wrap {
+            width: 65%;
+            float: right;
+            padding: 40px 25px 35px 25px;
+            border-radius: 0px 30px 30px 0px;
+            background: #ecf0f3;
+        }
+
+        .form-title {
+            text-align: left;
+            margin-left: 23px;
+            font-size: 28px;
+            letter-spacing: 0.5px;
+            color:#626262;
+        }
+
+        .form-fields {
+            display: table;
+            width: 100%;
+            padding: 15px 5px 5px 5px;
+        }
+
+        .form-fields input,
+        .form-fields textarea {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 18px;
+            color: #555;
+            padding: 20px 10px 20px 5px;
+            width: 100%
+        }
+
+        .form-fields textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        .form-group {
+            width: 46%;
+            float: left;
+            padding: 0px 30px;
+            margin: 14px 12px;
+            border-radius: 25px;
+            box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+        }
+
+        .form-fields .form-group:last-child {
+            width: 96%;
+        }
+
+        .submit-button {
+            width: 96%;
+            height: 60px;
+            margin: 0px 12px;
+            border-radius: 30px;
+            font-size: 20px;
+            ;
+            font-weight: 700;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            text-align: center;
+            background: #F44770;
+            box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+            transition: .5s;
+        }
+
+        .submit-button:hover {
+            background: #31279d;
+        }
+
+        /* Responsive css */
+        @media only screen and (max-width: 767px) {
+            .box-wrapper {
+                width: 100%;
+            }
+
+            .info-wrap,
+            .form-wrap {
+                width: 100%;
+                height: inherit;
+                float: none;
+            }
+
+            .info-wrap {
+                border-radius: 30px 30px 0px 0px;
+            }
+
+            .form-wrap {
+                border-radius: 0px 0px 30px 30px;
+            }
+
+            .form-group {
+                width: 100%;
+                float: none;
+                margin: 25px 0px;
+            }
+
+            .form-fields .form-group:last-child,
+            .submit-button {
+                width: 100%;
+            }
+
+            .submit-button {
+                margin: 10px 0px;
+            }
+        }
+
+
+        .footer {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			padding: 20px;
+			background-color:#0d0d0e;
+            font-size: 20px;
+		}
+
+		.footer > div {
+			margin: 10px;
+			flex: 1 1 200px; /* Ensures responsiveness by adjusting the width dynamically */
+		}
+
+		.footer h3 {
+			font-size: 1.2rem;
+		}
+
+		.footer ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		.footer ul li {
+			margin: 8px 0;
+		}
+
+		.footer ul li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.footer ul li a:hover {
+			text-decoration: underline;
+		}
+
+		.footer-right {
+			text-align: center;
+			color: gray;
+			padding: 20px;
+			width: 100%;
+			background-color: #e9e9e9;
+		}
+
+		@media (max-width: 768px) {
+			.footer {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.footer h3 {
+				font-size: 1.5rem;
+			}
+
+			.footer ul li {
+				font-size: 1rem;
+			}
+		}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Anurag's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section class="firstsection">
+            <div class="Lsection">Hi,My Name Is <span class="purple">Anurag</span>
+                <div>and i am a passionate</div>
+                <span id="element"></span>
+                <div class="button">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit GitHub</button>
+                </div>
+            </div>
+            <div class="Rsection">
+                <img src="dev2.png" alt="">
+            </div>
+        </section>
+        <hr>
+
+        <!-- Writing code for About Page -->
+        <section class="about" id="about">
+            <div class="content">
+                <div class="title"><span>About Me</span></div>
+                <di class="about-details">
+                    <div class="lef">
+                        <img decoding="async" src="me.jpg" alt="" height="400px" width="50%">
+                    </div>
+                    <div class="rig">
+                        <div class="topic">Designing,Developing,Coding</div>
+                        <p>Hello! I'm Anurag, a passionate and detail-oriented software developer with a strong
+                            foundation in coding. With a keen eye for design and a love for problem-solving, I craft
+                            innovative digital solutions that bring ideas to life.
+                            <br>
+                            I'm driven by a passion for learning, innovation, and collaboration. I believe in writing
+                            clean, modular, and well-documented code that empowers others to build upon. When I'm not
+                            coding, you can find me exploring new technologies, attending industry events, or mentoring
+                            aspiring developers.
+
+                        </p>
+                        <div class="button">
+                            <a href="https://www.linkedin.com/in/anurag-pasi-80a138259/"><button
+                                    style="color: aliceblue;">LinkedIn</button></a>
+                        </div>
+                    </div>
+            </div>
+            </div>
+        </section>
+        <hr>
+        <!-- Writing code for MY Skills -->
+        <section class="skills" id="skills">
+            <div class="content">
+                <div class="title"><span>My Skills</span></div>
+                <div class="skills-details">
+                    <div class="text">
+                        <div class="topic">Skills Reflects Our Knowledge</div>
+                        <p>
+                            HTML5: Semantic HTML for modern web application. <br> CSS3: Expertise in styling and layout
+                            and responsive design. <br>
+                            JavaScript (ES6+): Strong knowledge of modern JavaScript features and best practices. <br>
+                            <br>
+                            Frontend Frameworks & Libraries
+                            React: Experienced in building dynamic, component-based UIs with hooks and context.
+                            <br>Vue.js: Skilled in developing reactive interfaces.
+                            <br> Angular: Proficient in creating single-page applications with Angulars components and
+                            services.
+                        </p>
+                        <div class="experience">
+                            <div class="num">5</div>
+                            <div class="exp">Years Of <br> Coding Journey</div>
+                        </div>
+                    </div>
+                    <div class="boxes">
+                        <div class="box">
+                            <div class="topic">HTML</div>
+                            <div class="per">93%</div>
+                        </div>
+                        <div class="box">
+                            <div class="topic">CSS</div>
+                            <div class="per">80%</div>
+                        </div>
+                        <div class="box">
+                            <div class="topic">Javascript</div>
+                            <div class="per">70%</div>
+                        </div>
+                        <div class="box">
+                            <div class="topic">Bootstrap</div>
+                            <div class="per">78%</div>
+                        </div>
+                        <div class="box">
+                            <div class="topic">Python</div>
+                            <div class="per">56%</div>
+                        </div>
+                        <div class="box">
+                            <div class="topic">C and C++</div>
+                            <div class="per">72%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <hr>
+
+        <section class="secondSection">
+            <span class="text-grey">What I have Done So Far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="dev.png" alt="">
+                    <div class="verticle-title">
+                        Web Developer
+                        (2019-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quae nihil. Esse fuga
+                        perspiciatis maiores doloremque eveniet consequatur, molestiae nisi porro ratione labore sint
+                        error dolor dolorum quo accusantium reiciendis.
+                    </div>
+
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="dev.png" alt="">
+                    <div class="verticle-title">
+                        C++ Programmer
+                        (2019-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quae nihil. Esse fuga
+                        perspiciatis maiores doloremque eveniet consequatur, molestiae nisi porro ratione labore sint
+                        error dolor dolorum quo accusantium reiciendis.
+                    </div>
+
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="dev.png" alt="">
+                    <div class="verticle-title">
+                        C Developer
+                        (2019-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quae nihil. Esse fuga
+                        perspiciatis maiores doloremque eveniet consequatur, molestiae nisi porro ratione labore sint
+                        error dolor dolorum quo accusantium reiciendis.
+                    </div>
+
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="dev.png" alt="">
+                    <div class="verticle-title">
+                        Machine Learning
+                        (2024-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quae nihil. Esse fuga
+                        perspiciatis maiores doloremque eveniet consequatur, molestiae nisi porro ratione labore sint
+                        error dolor dolorum quo accusantium reiciendis.
+                    </div>
+
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="dev.png" alt="">
+                    <div class="verticle-title">
+                        C Programmer
+                        (2022-Present)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quae nihil. Esse fuga
+                        perspiciatis maiores doloremque eveniet consequatur, molestiae nisi porro ratione labore sint
+                        error dolor dolorum quo accusantium reiciendis.
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+        <hr> -->
+        <hr>
+        <!-- My Services Section Start -->
+        <section class="services" id="services">
+            <div class="content">
+                <div class="title"><span>My Services</span></div>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <div class="topic">Web Development</div>
+                        <p>Frontend Web Developer who focuses on the part of a website or application that users
+                            interact with directly and my role involves translating the design and user experience (UX)
+                            concepts into functional and visually appealing web interfaces. </p>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <div class="topic">Graphic Design</div>
+                        <p>My journey in design began with a fascination for art and a love for problem-solving, which
+                            has evolved into a career where I help brands communicate their essence through thoughtful
+                            and innovative design.
+
+                            I specialize in [branding, UI/UX design, print media, etc.]</p>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="topic">Digital Marketing</div>
+                        <p>I specialize in [SEO, content marketing, social media management, PPC advertising, email
+                            marketing, etc.]. My approach is to craft tailored strategies that align with your business
+                            goals, leveraging analytics and market insights to ensure every campaign is as effective as
+                            possible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <!-- Contact Me Section Start -->
+<section id="section-wrapper">
+    <div class="box-wrapper">
+        <div class="info-wrap">
+            <h2 class="info-title">Contact Information</h2>
+            <h3 class="info-sub-title">Get Connected  with me by adding me on my Social media Accounts!</h3>
+            <ul class="info-details">
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Phone:</span> <a href="tel:+91 93234 38262">+91 93234 38262</a>
+                </li>
+                <li>
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Email:</span> <a href="mailto:pasianurag7@gmail.com">pasianurag7</a>
+                </li>
+                <li>
+                    <i class="fas fa-globe"></i>
+                    <span>Website:</span> <a href="#">yoursite.com</a>
+                </li>
+            </ul>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/anurag.pasi.355/"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://x.com/Anuragpasi1467"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/anurag-pasi-80a138259/"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div class="form-wrap">
+            <form action="#" method="POST">
+                <h2 class="form-title">Send me a message</h2>
+                <div class="form-fields">
+                    <div class="form-group">
+                        <input type="text" class="fname" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="lname" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="email" placeholder="Mail">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="phone" placeholder="Phone">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Write your message"></textarea>
+                    </div>
+                </div>
+                <input type="submit" value="Send Message" class="submit-button">
+            </form>
+        </div>
+    </div>
+</section>
+
+    </main>
+    <footer>
+    <div class="footer">
+        <div class="footer-first">
+            <h3>Anurag's Portfolio</h3>
+        </div>
+        <div class="footer-second">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </div>
+        <div class="footer-third">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/anurag-pasi-80a138259/" target="_blank"><i class="fab fa-linkedin-in"></i>    LinkedIn</a></li>
+                <li><a href="https://github.com/AnuragITrmlau" target="_blank"><i class="fa-brands fa-github"></i>     GitHub</a></li>
+                <li><a href="https://www.instagram.com/anurag_pasi_02/" target="_blank"><i class="fa-brands fa-instagram"></i>   Instagram</a></li>
+                <li><a href="tel:+919323438262"><i class="fa-solid fa-phone"></i>+919323438262</a></li>
+                <li><a href="mailto:pasianurag65@gmail.com"><i class="fa-solid fa-envelope"></i>pasianurag65@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-right" style="background-color:black; color:white !important;">
+        &#169; 2024 www.pasianurag7.com | All rights reserved
+    </div>
+</footer>
+
+
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Graphic Designer.', 'Programmer.', 'Learning Enthusiast.', 'Athelete.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
